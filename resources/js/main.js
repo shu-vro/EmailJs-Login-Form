@@ -27,8 +27,9 @@ function submitEmail() {
         subject: subject.value,
         message: message.value,
     };
-
-    emailjs.send("service_7b9olgm", "template_w25rcoa", param).then(
+    let serviceId = alert("Please insert your service Id in line: 30");
+    let templateId = alert("Please insert your service Id in line: 31");
+    emailjs.send(serviceId, templateId, param).then(
         function (response) {
             alert("SUCCESS! " + response.status + ' ' + response.text);
         },
